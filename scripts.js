@@ -1,4 +1,4 @@
-
+// Scroll to Top 
 const button = document.querySelector('button')
 button.addEventListener('click', () => {
     window.scrollTo({
@@ -7,3 +7,6 @@ button.addEventListener('click', () => {
         behavior: 'smooth'
     })
 })
+
+// ------------------------------------------------
+
