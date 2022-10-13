@@ -17,7 +17,7 @@ body {
     display: block;
     position: relative;
     top: 30px;
-    left: 30px;
+    left: 0px;
     z-index: 1; /* z-index set the order of a positioned element */
     user-select: none; /* whether the user can select */
 }
@@ -106,6 +106,10 @@ body {
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     transition: 0.5s ease-in-out;
     margin-left: 2em;
+}
+
+.card .button {
+    border-radius: 20px;
 }
 
 .card:hover {
@@ -197,12 +201,10 @@ button {
   line-height: 1.15385;
   margin: 0;
   outline: none;
-  padding: 8px .8em;
-  position: relative;
+  padding: 8px 0.8em;
   text-align: center;
   text-decoration: none;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
 }
 
 button:hover, button:focus {
@@ -261,4 +263,20 @@ input[type=submit]:hover {
     align-items: center;
     justify-content: center;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    align-self: flex-end;
+}
+
+ol {
+    list-style: none;
+}
+
+
 
