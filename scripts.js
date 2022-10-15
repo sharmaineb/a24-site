@@ -1,27 +1,22 @@
 // Scroll to Top 
-const topButton = document.getElementsByClassName('topButton');
-topButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        left:0,
-        behavior: 'smooth'
-    })
-})
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
 
-// The function and show all columns
+// function and show all items
 filterSelection("all") 
-function filterSelection(c) {
+function filterSelection(e) {
   let x, i;
   x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
+  if (e == "all") e = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     removeProduction(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addProductuion(x[i], "show");
+    if (x[i].className.indexOf(e) > -1) addProductuion(x[i], "show");
   }
 }
 
-// Show the elements that are filtered
+// Show filtered elements
 function addProductuion(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -33,7 +28,7 @@ function addProductuion(element, name) {
   }
 }
 
-// Hide the elements that are not selected
+// Hide elements that are not selected
 function removeProduction(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -46,7 +41,7 @@ function removeProduction(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current button
+// Add active class to the current button 
 const btnContainer = document.getElementById("myBtnContainer");
 const btns = btnContainer.getElementsByClassName("btn");
 for (let i = 0; i < btns.length; i++) {
