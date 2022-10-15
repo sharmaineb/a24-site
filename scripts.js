@@ -6,39 +6,39 @@ function scrollToTop() {
 // function and show all items
 filterSelection("all") 
 function filterSelection(e) {
-  let x, i;
-  x = document.getElementsByClassName("column");
+  let show, i;
+  show = document.getElementsByClassName("column");
   if (e == "all") e = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    removeProduction(x[i], "show");
-    if (x[i].className.indexOf(e) > -1) addProductuion(x[i], "show");
+  for (i = 0; i < show.length; i++) {
+    removeProduction(show[i], "show");
+    if (show[i].className.indexOf(e) > -1) addProductuion(show[i], "show");
   }
 }
 
 // Show filtered elements
 function addProductuion(element, name) {
-  let i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
+  let i, filtered1, filtered2;
+  filtered1 = element.className.split(" ");
+  filtered2 = name.split(" ");
+  for (i = 0; i < filtered2.length; i++) {
+    if (filtered1.indexOf(filtered2[i]) == -1) {
+      element.className += " " + filtered2[i];
     }
   }
 }
 
 // Hide elements that are not selected
 function removeProduction(element, name) {
-  let i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+  let i, filtered1, filtered2;
+  filtered1 = element.className.split(" ");
+  filtered2 = name.split(" ");
+  for (i = 0; i < filtered2.length; i++) {
+    while (filtered1.indexOf(filtered2[i]) > -1) {
+      filtered1.splice(filtered1.indexOf(filtered2[i]), 1); 
     }
   }
-  element.className = arr1.join(" ");
+  element.className = filtered1.join(" ");
 }
 
 // Add active class to the current button 
@@ -51,3 +51,4 @@ for (let i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
