@@ -12,6 +12,7 @@ body {
     justify-content: center;
 }
 
+/* background image */
 #container {
     background-attachment: fixed;
     background-image: url(./images1/a24.gif);
@@ -22,69 +23,29 @@ body {
     background-size: cover;
 }
 /* Navigation Section */
-#menuToggle {
-    display: block;
-    position: relative;
-    top: 30px;
-    left: 0px;
-    z-index: 1; /* z-index set the order of a positioned element */
-    user-select: none; /* whether the user can select */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background: #f1f1f1;
 }
 
-#menuToggle a {
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding-left: 0.5em;
+}
+
+nav a {
     text-decoration: none;
     color: #000000;
-    transition: color 0.3s ease;
 }
-
-#menuToggle a:hover {
-    color: #daa520;
-}
-
-#menuToggle input {
-    display: block;
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    top: -5px;
-    left: -3px;
-    cursor: pointer;
-    opacity: 0; /* transparency of element */
-    z-index: 2;
-}
-
-#menuToggle span {
-    display: flex;
-    width: 30px;
-    height: 3px;
-    margin-bottom: 4px;
-    position: relative;
-    background: #ACB5AF;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-}
-
-#menu {
-    position: absolute;
-    width: 200px;
-    margin: 0px 0px 0px 0px;
-    padding: 25px;
-    padding-top: 50px;
-    background: #f1f1f1;
-    list-style: none;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-}
-
-#menu li {
-    padding: 5px 0;
-    font-size: 20px;
-}
-
-#menuToggle input:checked ~ ul {
-    transform: none;
-}
+    
 
 * {
     box-sizing: border-box;
@@ -93,7 +54,7 @@ body {
 body {
     background-color: #f1f1f1;
     padding: 20px;
-    font-family: Arial;
+    font-family: helvetica;
 }
   
 .row {
