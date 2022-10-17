@@ -1,5 +1,5 @@
 const btnContainer = document.getElementById("myBtnContainer");
-const btns = btnContainer.getElementsByClassName("btn");
+const buttons = btnContainer.getElementsByClassName("btn");
 
 // Scroll to Top 
 function scrollToTop() { // gets the vertical position of the scroll bar
@@ -46,8 +46,8 @@ function removeProduction(element, name) {
 
 
 
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
+for (i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function(){
     const current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
