@@ -11,18 +11,12 @@
     <header>
     <!--Navigation-->
         <nav>
-                <input type="checkbox"/>
-                <!--spans as placeholder for hamburger-->
-                <span></span>
-                <span></span>
-                <span></span>
             <ul>
-                <li><a href="#home">Home</a></li>        
+                <li><a href="#home">Home</a></li>
                 <li><a href="#films">Films/TV Shows</a></li>
                 <li><a href="#socials">Sign-Up</a></li>
                 <li><a href="https://a24films.com/">Explore</a></li>
             </ul>
-            
         </nav>
     <!--End Navigation-->
     </header>
@@ -33,13 +27,17 @@
     <!--End About Section-->
     </div>
     <h2>Produced by: A24</h2>
-    <div id="myBtnContainer">
+    <!-- button container -->
+    <div id="buttonContainer">
         <button class="btn active" onclick="filterSelection('all')"> Show All</button>
         <button class="btn" onclick="filterSelection('upcoming')"> Upcoming</button>
         <button class="btn" onclick="filterSelection('film')"> Films</button>
         <button class="btn" onclick="filterSelection('tv')"> Television</button>
     </div>
+    <!-- end button container -->
+    <!-- div for background image -->
     <div class="wrapper">
+    <!-- start of content   -->
     <div class="row">
       <div class="column film">
         <div class="content">
@@ -341,7 +339,7 @@
          
   </div>
 </div>
-<!-- END GRID -->
+<!-- end content -->
 <!--Signup Section-->
 <div id="socials">
   <footer>
@@ -361,7 +359,9 @@
           <input type="submit" value="Sign-Up">
       </div>
       </form>
-          <button onclick="scrollToTop()">Click To Scroll To Top</button>
+      <!-- end signup section -->
+      <!-- scroll to top button -->
+        <button onclick="scrollToTop()">Click To Scroll To Top</button>
 </div>
 </footer>
 <script src="scripts.js"></script>
