@@ -1,6 +1,6 @@
 // Scroll to Top 
-function scrollToTop() {
-  window.scrollTo(0, 0);
+function scrollToTop() { // gets the vertical position of the scroll bar
+  window.scrollTo(0, 0); // scroll event activates when the user scrolls up or down
 }
 
 // function and show all items
