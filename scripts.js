@@ -1,4 +1,4 @@
-const btnContainer = document.getElementById("myBtnContainer");
+const buttonContainer = document.getElementById("buttonContainer");
 const buttons = btnContainer.getElementsByClassName("btn");
 
 // Scroll to Top 
