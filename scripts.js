@@ -3,7 +3,7 @@ function scrollToTop() { // gets the vertical position of the scroll bar
   window.scrollTo(0, 0); // scroll event activates when the user scrolls up or down
 }
 
-// function and show all items
+
 filterSelection("all") 
 function filterSelection(e) {
   let show, i;
@@ -16,7 +16,7 @@ function filterSelection(e) {
   }
 }
 
-// Show filtered elements
+
 function addProductuion(element, name) {
   let i, filtered1, filtered2;
   filtered1 = element.className.split(" ");
@@ -28,7 +28,7 @@ function addProductuion(element, name) {
   }
 }
 
-// Hide elements that are not selected
+
 function removeProduction(element, name) {
   let i, filtered1, filtered2;
   filtered1 = element.className.split(" ");
@@ -41,7 +41,7 @@ function removeProduction(element, name) {
   element.className = filtered1.join(" ");
 }
 
-// Add active class to the current button 
+
 const btnContainer = document.getElementById("myBtnContainer");
 const btns = btnContainer.getElementsByClassName("btn");
 for (let i = 0; i < btns.length; i++) {
