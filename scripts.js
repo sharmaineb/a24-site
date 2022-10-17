@@ -1,3 +1,6 @@
+const btnContainer = document.getElementById("myBtnContainer");
+const btns = btnContainer.getElementsByClassName("btn");
+
 // Scroll to Top 
 function scrollToTop() { // gets the vertical position of the scroll bar
   window.scrollTo(0, 0); // scroll event activates when the user scrolls up or down
@@ -42,8 +45,7 @@ function removeProduction(element, name) {
 }
 
 
-const btnContainer = document.getElementById("myBtnContainer");
-const btns = btnContainer.getElementsByClassName("btn");
+
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     const current = document.getElementsByClassName("active");
