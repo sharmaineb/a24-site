@@ -8,6 +8,7 @@ function scrollToTop() { // gets the vertical position of the scroll bar
 }
 
 // declare a function called filterSelection 
+// shows all the cards
 filterSelection("all") 
 function filterSelection(e) {
   let show, i;
