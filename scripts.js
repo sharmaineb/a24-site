@@ -1,5 +1,5 @@
 const buttonContainer = document.getElementById("buttonContainer");
-const buttons = btnContainer.getElementsByClassName("btn");
+const buttons = buttonContainer.getElementsByClassName("btn");
 
 // Scroll to Top 
 function scrollToTop() { // gets the vertical position of the scroll bar
