@@ -1,3 +1,4 @@
+// set constants (cannot be redeclared)
 const buttonContainer = document.getElementById("buttonContainer");
 const buttons = buttonContainer.getElementsByClassName("btn");
 
@@ -6,20 +7,19 @@ function scrollToTop() { // gets the vertical position of the scroll bar
   window.scrollTo(0, 0); // scroll event activates when the user scrolls up or down
 }
 
-
+// declare a function called filterSelection 
 filterSelection("all") 
 function filterSelection(e) {
   let show, i;
   show = document.getElementsByClassName("column");
   if (e == "all") e = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < show.length; i++) {
     removeProduction(show[i], "show");
     if (show[i].className.indexOf(e) > -1) addProductuion(show[i], "show");
   }
 }
 
-
+// function that shows the content cards in the category selected
 function addProductuion(element, name) {
   let i, filtered1, filtered2;
   filtered1 = element.className.split(" ");
@@ -31,7 +31,7 @@ function addProductuion(element, name) {
   }
 }
 
-
+// function that hides the other content cards not in the category selected
 function removeProduction(element, name) {
   let i, filtered1, filtered2;
   filtered1 = element.className.split(" ");
@@ -44,8 +44,7 @@ function removeProduction(element, name) {
   element.className = filtered1.join(" ");
 }
 
-
-
+// handles clicks
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function(){
     const current = document.getElementsByClassName("active");
@@ -53,4 +52,5 @@ for (i = 0; i < buttons.length; i++) {
     this.className += " active";
   });
 }
+
 
